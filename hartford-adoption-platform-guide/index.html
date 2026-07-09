@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use the Adoption Platform — Step-by-Step Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ultraviolet:#4A5FF7;
+    --lunar50:#F8F7F3;
+    --eclipse:#DDFC9D;
+    --starlight:#E6E8FE;
+    --sunbeam:#FCD69D;
+    --black:#000000;
+    --lunar700:#555553;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:var(--lunar50);
+    color:var(--black);
+    line-height:1.5;
+  }
+  a{color:var(--ultraviolet);}
+  .hero{
+    background:var(--ultraviolet);
+    color:#fff;
+    padding:56px 24px 64px;
+  }
+  .hero-inner{
+    max-width:880px;
+    margin:0 auto;
+  }
+  .logo{
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:-0.02em;
+    color:#fff;
+    margin-bottom:32px;
+  }
+  .eyebrow{
+    display:inline-block;
+    background:var(--eclipse);
+    color:var(--black);
+    font-weight:600;
+    font-size:13px;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:20px;
+  }
+  h1.title{
+    font-size:44px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    line-height:1.08;
+    margin:0 0 20px;
+  }
+  h1.title mark{
+    background:var(--eclipse);
+    color:var(--black);
+    padding:0 8px;
+    border-radius:6px;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+  }
+  .hero p.sub{
+    font-size:18px;
+    color:var(--starlight);
+    max-width:640px;
+    margin:0;
+  }
+  nav.toc{
+    max-width:880px;
+    margin:-30px auto 0;
+    padding:0 24px;
+  }
+  .toc-card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+    padding:20px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .toc-card a{
+    text-decoration:none;
+    color:var(--ultraviolet);
+    background:var(--starlight);
+    font-weight:600;
+    font-size:13px;
+    padding:8px 14px;
+    border-radius:999px;
+  }
+  main{
+    max-width:880px;
+    margin:0 auto;
+    padding:56px 24px 24px;
+  }
+  section.section{
+    margin-bottom:56px;
+  }
+  .section-head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:8px;
+  }
+  .section-num{
+    background:var(--black);
+    color:#fff;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:15px;
+    flex-shrink:0;
+  }
+  .section-head h2{
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  .section-rule{
+    height:4px;
+    width:56px;
+    background:var(--eclipse);
+    border-radius:4px;
+    margin:10px 0 28px 48px;
+  }
+  .step{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:24px;
+    padding:20px 0;
+    margin-bottom:8px;
+    border-bottom:1px solid #E5E4DE;
+    align-items:center;
+  }
+  .step:last-child{
+    border-bottom:none;
+  }
+  .step img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid #eee;
+    display:block;
+  }
+  .step-body{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .step-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .step-badge{
+    background:var(--ultraviolet);
+    color:#fff;
+    font-weight:700;
+    font-size:13px;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+  .step-title{
+    font-weight:700;
+    font-size:17px;
+  }
+  .step-text{
+    font-size:15px;
+    color:var(--lunar700);
+    margin:0;
+  }
+  .step.no-media{
+    grid-template-columns:1fr;
+  }
+  @media(max-width:680px){
+    .step{grid-template-columns:1fr;}
+    h1.title{font-size:32px;}
+  }
+  .closing{
+    background:var(--black);
+    color:#fff;
+    border-radius:16px;
+    padding:40px 32px;
+    text-align:center;
+    margin:48px 0 8px;
+  }
+  .closing h3{
+    font-size:24px;
+    margin:0 0 10px;
+  }
+  .closing p{
+    color:#ccc;
+    margin:0 0 20px;
+    font-size:15px;
+  }
+  .cta{
+    display:inline-block;
+    background:var(--eclipse);
+    color:var(--black);
+    font-weight:700;
+    font-size:14px;
+    padding:12px 26px;
+    border-radius:999px;
+    text-decoration:none;
+  }
+  footer{
+    text-align:center;
+    color:var(--lunar700);
+    font-size:13px;
+    padding:24px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="logo">multiverse</div>
+    <span class="eyebrow">Adoption Platform Guide</span>
+    <h1 class="title">How to use the <mark>Adoption Platform</mark></h1>
+    <p class="sub">A step-by-step walkthrough of the platform — find a use case, try it, and share what happened. Every step below includes a short clip of exactly what to click.</p>
+  </div>
+</div>
+
+<nav class="toc">
+  <div class="toc-card">
+    <a href="#s1">1. Getting started</a>
+    <a href="#s2">2. Opening a use case</a>
+    <a href="#s3">3. Finishing a use case</a>
+    <a href="#s4">4. Team activity &amp; leaderboard</a>
+    <a href="#s5">5. Library &amp; requesting a use case</a>
+    <a href="#s6">6. Keep coming back</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="section" id="s1">
+    <div class="section-head"><div class="section-num">1</div><h2>Getting started</h2></div>
+    <div class="section-rule"></div>
+
+    <div class="step">
+      <img src="step01_hook.gif" alt="Adoption Platform homepage">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">1</div><div class="step-title">Open the homepage and check recommendations</div></div>
+        <p class="step-text">Head to <a href="https://members.multiverse.io" target="_blank" rel="noopener">members.multiverse.io</a> each week to find one AI shortcut for your job — the goal is to try 1–2 use cases a week until you've worked through them all. At the top of the homepage you'll find personalized recommendations, picked based on your role and refreshed weekly, so it's worth checking back often.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step09_collections.gif" alt="Browsing use case collections">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Browse collections</div></div>
+        <p class="step-text">Below your recommendations, use cases are grouped into collections you can browse by topic. This is the fastest way to find something relevant to what you're working on right now.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s2">
+    <div class="section-head"><div class="section-num">2</div><h2>Opening a use case</h2></div>
+    <div class="section-rule"></div>
+
+    <div class="step">
+      <img src="step02_open_usecase.gif" alt="Opening a use case from the homepage">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">1</div><div class="step-title">Click into a use case</div></div>
+        <p class="step-text">A use case is a step-by-step tutorial on applying AI to a specific task — things like drafting a referral justification or summarizing a report. Every one has actually been tried and found valuable by a colleague. Click into any use case card to open it.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step03_video_embed.gif" alt="Video embed at the top of a use case">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Watch the short video</div></div>
+        <p class="step-text">Most use cases start with a short video, 1–3 minutes, showing a real example of the use case in action.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step04_stepbystep.gif" alt="Step-by-step walkthrough with example prompts">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">3</div><div class="step-title">Follow the step-by-step walkthrough</div></div>
+        <p class="step-text">Below the video is a detailed walkthrough — step-by-step instructions, example prompts, and screenshots — so you can apply it to your own work right away.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step05_coaching.gif" alt="Schedule Session button for AI specialist coaching">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">4</div><div class="step-title">Book a coaching session if you get stuck</div></div>
+        <p class="step-text">If you get stuck, or just want to talk through how to apply it, you can book a 1:1 session with an AI specialist right from the use case page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s3">
+    <div class="section-head"><div class="section-num">3</div><h2>Finishing a use case</h2></div>
+    <div class="section-rule"></div>
+
+    <div class="step">
+      <img src="step06_thumbs.gif" alt="Thumbs up or down rating at the bottom of a use case">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">1</div><div class="step-title">Rate the use case</div></div>
+        <p class="step-text">Once you've tried a use case, tell us how it went. Thumbs down gives you a chance to leave feedback on what didn't work. Thumbs up prompts you to share an Impact Story.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step07_impact_form.gif" alt="Impact story form">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Share your impact story</div></div>
+        <p class="step-text">An impact story is short: what you did, what impact it had, and roughly how many minutes a week you expect it to save you. It's the main way your team finds out a use case is actually worth their time — so it's worth the extra minute to fill in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s4">
+    <div class="section-head"><div class="section-num">4</div><h2>Team activity &amp; leaderboard</h2></div>
+    <div class="section-rule"></div>
+
+    <div class="step">
+      <img src="step10_team_activity.gif" alt="Team Activity Feed page">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">1</div><div class="step-title">Visit the Team Activity page</div></div>
+        <p class="step-text">Once you've submitted an impact story, it shows up on the Team Activity page — a feed of what everyone across the company is trying and finding valuable. You can filter by tool, team, or a specific person, and see the time people are saving.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step11_leaderboard_profile.gif" alt="Leaderboard and a teammate's profile">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Check the leaderboard and profiles</div></div>
+        <p class="step-text">The leaderboard shows who's submitted the most impact stories. If someone on your team is doing a lot with AI, click into their profile to see everything they've tried — and pick one for yourself.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s5">
+    <div class="section-head"><div class="section-num">5</div><h2>Library &amp; requesting a use case</h2></div>
+    <div class="section-rule"></div>
+
+    <div class="step">
+      <img src="step12_library.gif" alt="Library page listing every use case">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">1</div><div class="step-title">Browse the full Library</div></div>
+        <p class="step-text">If you want to see everything on the platform in one place, that's the Library — every use case, filterable by team and tool.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <img src="step13_request_form.gif" alt="Request a Use Case form">
+      <div class="step-body">
+        <div class="step-label"><div class="step-badge">2</div><div class="step-title">Request a use case</div></div>
+        <p class="step-text">If you have a problem you'd like AI to help with — or a solution you've already figured out that others should know about — click Request a Use Case. Fill in a few details, and an AI specialist will follow up to get it added to the platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="s6">
+    <div class="section-head"><div class="section-num">6</div><h2>Keep coming back</h2></div>
+    <div class="section-rule"></div>
+
+    <p class="step-text">AI impact compounds — the more use cases you try, the more time you get back each week, and the more habits you build that stick. New use cases get added over time too, so there's always something fresh to try. Aim to check the platform a few times a week, not just once, and pick up a new use case each visit before your next check-in.</p>
+  </section>
+
+  <div class="closing">
+    <h3>Ready to try one?</h3>
+    <p>Open the Adoption Platform and pick a use case from your recommendations.</p>
+    <a class="cta" href="#s1">Back to the top ↑</a>
+  </div>
+
+</main>
+
+<footer>Multiverse — Adoption Platform Guide</footer>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
